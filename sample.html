@@ -3,14 +3,28 @@
     <title>sample</title>
   </head>
   <body>
-    <div style="border:solid 1px; display:table; margin:5px; padding:5px;">
-      <input type="radio" name="group1" id="radio1-1"><label for="radio1-1">radio1-1</label>
-      <input type="radio" name="group1" id="radio1-2"><label for="radio1-2">radio1-2</label>
+    <div style="border:solid 1px; display:table; margin:5px; padding:5px;">uncheckable
+      <div style="border:solid 1px; display:table; margin:5px; padding:5px;">
+        <input type="radio" name="group1" id="radio1-1" class="cls1"><label for="radio1-1">radio1-1</label>
+        <input type="radio" name="group1" id="radio1-2" class="cls1"><label for="radio1-2">radio1-2</label>
+      </div>
     </div>
-    <div style="border:solid 1px; display:table; margin:5px; padding:5px;">
-      <input type="radio" name="group2" id="radio2-1"><label for="radio2-1">radio2-1</label>
-      <input type="radio" name="group2" id="radio2-2"><label for="radio2-2">radio2-2</label>
+    <div style="border:solid 1px; display:table; margin:5px; padding:5px;">not uncheckable
+      <div style="border:solid 1px; display:table; margin:5px; padding:5px;">
+        <input type="radio" name="group2" id="radio2-1" class="cls2"><label for="radio2-1">radio2-1</label>
+        <input type="radio" name="group2" id="radio2-2" class="cls2"><label for="radio2-2">radio2-2</label>
+      </div>
     </div>
-    <script src="uncheckable_radio_buttons.js"></script>
+    <div style="border:solid 1px; display:table; margin:5px; padding:5px;">uncheckable
+      <div style="border:solid 1px; display:table; margin:5px; padding:5px;">
+        <input type="radio" name="group3" id="radio3-1" class="cls3"><label for="radio3-1">radio3-1</label>
+        <input type="radio" name="group3" id="radio3-2" class="cls3"><label for="radio3-2">radio3-2</label>
+      </div>
+    </div>
+
+    <script src="ucrb.js"></script>
+    <script>ucrb.addClass("cls1");</script>
+    <script>ucrb.addClass("cls3");</script>
+
   </body>
 </html>
