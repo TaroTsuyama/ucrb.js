@@ -1,3 +1,3 @@
 # ucrb
-UnCheckable Radio Buttons
-ラジオボタンのチェックを解除できるようになります。
+UnCheckable Radio Buttons  
+ラジオボタンのチェックを解除できるようになります。  
