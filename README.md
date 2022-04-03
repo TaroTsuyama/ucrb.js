@@ -13,11 +13,15 @@ ucrb.js を読み込ませるだけで**すべてのラジオボタン**がチ�
 <script src="ucrb.js"></script>
 ```
 
-### 特定のラジオボタンだけに適用する場合
-適用する範囲を特定のラジオボタンだけにしたい場合  
-1.対象の input 要素に適当な class を追加  
-2.ucrb.js を読み込ませる  
-3.ucrb.addClass で class を指定する  
+## 特定のラジオボタンだけに適用する場合
+この機能を適用するラジオボタンを特定の範囲のものだけにしたい場合、次のメソッドを使用します。  
+1. class で指定する場合: addClass メソッド  
+2. name で指定する場合: addName メソッド  
+
+### class で指定する場合
+1. 対象の input 要素に適当な class を追加  
+2. ucrb.js を読み込ませる  
+3. ucrb.addClass で class を指定する  
 
 ```html
 <input type="radio" name="radio1" id="selection1-1"><label for="selection1-1">selection1-1</label>
@@ -30,4 +34,21 @@ ucrb.js を読み込ませるだけで**すべてのラジオボタン**がチ�
 
 <script src="ucrb.js"></script>
 <script>ucrb.addClass("uncheckable");</script>
+```
+
+### name で指定する場合
+1. ucrb.js を読み込ませる  
+2. ucrb.addName で name を指定する  
+
+```html
+<input type="radio" name="radio1" id="selection1-1"><label for="selection1-1">selection1-1</label>
+<input type="radio" name="radio1" id="selection1-2"><label for="selection1-2">selection1-2</label>
+<input type="radio" name="radio1" id="selection1-3"><label for="selection1-3">selection1-3</label>
+
+<input type="radio" name="radio2" id="selection2-1"><label for="selection2-1">selection2-1</label>
+<input type="radio" name="radio2" id="selection2-2"><label for="selection2-2">selection2-2</label>
+<input type="radio" name="radio2" id="selection2-3"><label for="selection2-3">selection2-3</label>
+
+<script src="ucrb.js"></script>
+<script>ucrb.addName("radio1");</script>
 ```
