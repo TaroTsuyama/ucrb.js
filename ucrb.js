@@ -6,18 +6,18 @@ const ucrb = {
     main: function(){
         const queryConst = "input[type='radio']";
         let queryStr = "";
-        this.classes.forEach(classStr =>{
+        for(let i=0;i<this.classes.length;i++){
             if(queryStr){
                 queryStr += ","
             }
-            queryStr += queryConst + "[class='" + classStr + "']"
-        });
-        this.names.forEach(nameStr =>{
+            queryStr += queryConst + "[class='" + this.classes[i] + "']"
+        }
+        for(let i=0;i<this.names.length;i++){
             if(queryStr){
                 queryStr += ","
             }
-            queryStr += queryConst + "[name='" + nameStr + "']"
-        });
+            queryStr += queryConst + "[name='" + this.names[i] + "']"
+        }
         if(!queryStr){
             queryStr = queryConst;
         }
@@ -30,7 +30,8 @@ const ucrb = {
             },0)
         }
 
-        radioButtons.forEach(radioButton => {
+        for(let i=0;i<radioButtons.length;i++){
+            let radioButton = radioButtons[i]
             let label = document.querySelector('label[for="' + radioButton.id + '"]')
 
             radioButton.addEventListener("mouseup", func=()=>{
@@ -46,7 +47,7 @@ const ucrb = {
                     }
                 });
             }
-        });
+        }
     },
 
     addClass: function(classStr){
@@ -58,6 +59,6 @@ const ucrb = {
     }
 }
 
-window.onload =()=> {
+window.addEventListener("load", func=()=>{
     ucrb.main();
-}
+});
